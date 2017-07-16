@@ -57,5 +57,5 @@
 
 **paradigm** - a typical example or pattern of something
 
-* **Prototypal Inheritance**
+* **Prototypal Inheritance** - instances inherit directly from other objects
 * **Functional Programming (FP)** - process of building software by composing **pure functions, avoiding shared state, mutable data, and side effects**
