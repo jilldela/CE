@@ -4,6 +4,11 @@
 
 **DOM (Document Object Model)** - a model in which the document or web page contains objects (elements, links, etc.) that can be manipulated
 
+* **var, let, const** - used to declare variables
+  * `var` - least specific; can be redeclared
+  * `let` - can be updated
+  * `const` - can't be reassigned
+
 * **Builtin methods & Standard Data Types**
   * Objects
   * Arrays
@@ -14,7 +19,7 @@
   * Arrow functions
   * rest/spread operator
   * default parameters
-  * destructuring
+  * **destructuring** - extracting values from objects or arrays and assigning them to named variables
 
 * **Closures**
   * How does the function scope behave?
@@ -53,4 +58,4 @@
 **paradigm** - a typical example or pattern of something
 
 * **Prototypal Inheritance**
-* **Functional Programming**
+* **Functional Programming (FP)** - process of building software by composing **pure functions, avoiding shared state, mutable data, and side effects**
