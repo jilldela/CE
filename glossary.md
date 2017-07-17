@@ -19,6 +19,12 @@
 * program in which the **data type of a data structure and its functions are defined**
 * organized around object rather than functions and data rather than logic
 
+#### Pass By Reference
+* When a function takes a reference to the original object and will act on the object
+
+#### Pass By Value
+* When a function takes an argument, it makes a copy of the argument and does not mutate the original
+
 #### Procedural Programming
 
 #### Programming Paradigms 
