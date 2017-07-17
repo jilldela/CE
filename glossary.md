@@ -12,6 +12,9 @@
 #### Immutability
 * cannot be modified after creation
 
+#### Linked List
+* **sequence of nodes** in which each node holds the value/data for the node and a pointer/reference to the next node in the list. Connections can be uni-directional (singly linked list) with reference to only the next node or bi-directional (doubly linked list) with reference to both previous and next nodes.
+
 #### Mutability
 * can be modified after creation
 
