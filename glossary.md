@@ -46,7 +46,7 @@
 * a function which **given the same inputs, always returns the same output and has no side-effects**
 
 #### Router
-* matches paths to the appropriate controller and its action/method to run within the controller
+* matches requested paths to the appropriate controller, instantiate the route's controller, and run the appropriate action/method within the controller
 
 #### Side Effects
 * any application state change that is observable outside the function being called other than its return value
