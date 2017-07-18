@@ -2,6 +2,7 @@
 
 #### Binding
 * capture environment (variables, methods, this/self, etc.) that are in-scope at the current point of a program and make them available in another context
+* encapsulate all of the in-scope variables and methods, storing them in an object, so that the current context can be passed around and used in another context
 
 #### Class Inheritance
 * instances inherit from classes and create sub-class relationships
