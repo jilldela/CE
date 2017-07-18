@@ -10,6 +10,7 @@
 #### Cookies
 * client information stored on the server that persists even if the user navigates to a different site, or closes the tab or browser.
 * consists of a name, value, and other optional attributes
+* Cookies are added to the client's browser by putting them into the response
 
 #### Function Composition
 * the process of combining two or more functions in order to produce a new function or perform a computation.
