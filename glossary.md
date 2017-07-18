@@ -45,6 +45,9 @@
 #### Pure Function
 * a function which **given the same inputs, always returns the same output and has no side-effects**
 
+#### Router
+* matches paths to the appropriate controller and its action/method to run within the controller
+
 #### Side Effects
 * any application state change that is observable outside the function being called other than its return value
 * i.e. modification of external variable or object property; triggering external process; console log; writing to screen, file, or network
