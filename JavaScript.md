@@ -69,3 +69,15 @@
   * created when function starts and deleted when function is completed
 * **global variables**--variables declared outside of functions
   * have **global scope**--all scripts and functions on a web page can access it
+
+### What are some key differences between ES5 and ES6?
+* Arrow functions in ES6
+* Classes in ES6
+* Modules in ES6
+* `let` and `const` in ES6
+* Promises in ES6
+* Destructuring assignment in ES6
+* Default parameters in ES6
+* Template literals in ES6
+* Multi-line strings in ES6
+* Enhanced Object literals in ES6
