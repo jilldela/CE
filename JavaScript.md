@@ -59,3 +59,13 @@
 
 * **Prototypal Inheritance** - instances inherit directly from other objects
 * **Functional Programming (FP)** - process of building software by composing **pure functions, avoiding shared state, mutable data, and side effects**
+
+### What are the different scopes available in JavaScript?
+
+* **In JavaScript, scope is the set of variables, objects, and functions that you have access to.**
+* JavaScript has **function scope--the scope changes inside functions**
+* **local variables**--variables declared within a function
+  * can only be accessed within the function
+  * created when function starts and deleted when function is completed
+* **global variables**--variables declared outside of functions
+  * have **global scope**--all scripts and functions on a web page can access it
