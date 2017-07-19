@@ -1,5 +1,10 @@
 # Glossary
 
+#### API
+* Application Programming Interface
+* set of requirements that govern how one application can talk to another
+* allows for applications to share data and take actions by limiting outside program access to a specific set of features (without requiring developers to share all of the software's code)
+
 #### Binding
 * capture environment (variables, methods, this/self, etc.) that are in-scope at the current point of a program and make them available in another context
 * encapsulate all of the in-scope variables and methods, storing them in an object, so that the current context can be passed around and used in another context
@@ -11,6 +16,14 @@
 
 #### Class Inheritance
 * instances inherit from classes and create sub-class relationships
+* Class inheritance creates parent/child object taxonomies as a side-effect.
+
+#### Closure
+* A function enclosed in another function with reference to outer variables
+* Why is it useful?
+  * to enable data privacy
+    * closures store their outer variables by reference, not by value
+    * the enclosed variables are only in scope within the containing (outer) function
 
 #### Cookies
 * client information stored on the server that persists even if the user navigates to a different site, or closes the tab or browser.
@@ -46,6 +59,9 @@
 
 #### Programming Paradigms 
 * ways of thinking about software construction based on some fundamental, defining principles
+
+#### Prototypal Inheritance
+* Objects inherit directly from other objects
 
 #### Pure Function
 * a function which **given the same inputs, always returns the same output and has no side-effects**
