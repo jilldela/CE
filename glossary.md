@@ -45,6 +45,10 @@
 #### Mutability
 * can be modified after creation
 
+#### OAuth
+* authentication protocol that allows you to approve one application interacting with another on your behalf **without giving away your password**
+* allows for granular permission levels
+
 #### Object-Oriented Programming (OOP)
 * program in which the **data type of a data structure and its functions are defined**
 * organized around object rather than functions and data rather than logic
@@ -75,3 +79,4 @@
 
 #### Shared State
 * any variable, object, or memory space that exists in a shared scope, or as the property of an object being passed between scopes
+
