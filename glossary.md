@@ -80,6 +80,13 @@
 #### Shared State
 * any variable, object, or memory space that exists in a shared scope, or as the property of an object being passed between scopes
 
+#### SOA
+* **Service-Oriented Architecture**
+* set of components which can be invoked, and whose interface descriptions can be published and discovered
+* style of software design where services are provided to the other components by application components through a communication protocol over a network
+* how to compose an application by integration of distributed, separately-maintained and deployed software components
+* the policies, practices, and frameworks by which we ensure the right services are provided and consumed.
+
 #### SSL
 * Secure Sockets Layer
 * standard security technology for establishing an encrypted link between a web server and a browser
