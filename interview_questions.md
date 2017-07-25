@@ -1,5 +1,9 @@
 # Interview Questions
 
+## What are two programming paradigms of Ruby?
+* Imperative
+* Declarative
+
 ## What is HTTPS and how is it different from HTTP?
 #### HTTP stands for Hyper Text Transfer Protocol
   * protocol which data is sent between browser and web server

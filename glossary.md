@@ -30,6 +30,16 @@
 * consists of a name, value, and other optional attributes
 * Cookies are added to the client's browser by putting them into the response
 
+#### Database Schema
+* description of the organization of your database into tables and columns and datatypes
+
+#### DSL
+* **Domain Specific Language**
+
+#### Dynamically Typed
+* do not need to specify data type when declaring methods or variables
+* Ruby is dynamically typed
+
 #### Function Composition
 * the process of combining two or more functions in order to produce a new function or perform a computation.
 
@@ -53,6 +63,10 @@
 * program in which the **data type of a data structure and its functions are defined**
 * organized around object rather than functions and data rather than logic
 
+#### ORM
+* **Object Relational Mapping**
+* system that translates between SQL and Ruby (or Java, Lisp, etc...) objects
+
 #### Pass By Reference
 * When a function takes a reference to the original object and will act on the object
 
@@ -70,6 +84,11 @@
 #### Pure Function
 * a function which **given the same inputs, always returns the same output and has no side-effects**
 
+### RDBMS
+* **Relational Database Management Systems**
+* way to organize data and their relationships, persisting that data and querying that data
+* data organized in tables
+
 #### Router
 * matches requested paths to the appropriate controller, instantiate the route's controller, and run the appropriate action/method within the controller
 
@@ -86,6 +105,11 @@
 * style of software design where services are provided to the other components by application components through a communication protocol over a network
 * how to compose an application by integration of distributed, separately-maintained and deployed software components
 * the policies, practices, and frameworks by which we ensure the right services are provided and consumed.
+
+#### SQL
+* **Structured Query Language**
+* domain-specific language designed to query data out of relational databases
+
 
 #### SSL
 * Secure Sockets Layer
