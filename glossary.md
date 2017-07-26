@@ -5,6 +5,9 @@
 * set of requirements that govern how one application can talk to another
 * allows for applications to share data and take actions by limiting outside program access to a specific set of features (without requiring developers to share all of the software's code)
 
+#### Big O
+* the language and metric used to describe the efficiency of algorithms
+
 #### Binding
 * capture environment (variables, methods, this/self, etc.) that are in-scope at the current point of a program and make them available in another context
 * encapsulate all of the in-scope variables and methods, storing them in an object, so that the current context can be passed around and used in another context
