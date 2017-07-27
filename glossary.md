@@ -1,5 +1,8 @@
 # Glossary
 
+#### Amortized Time
+* while worst case (O(n)) happens every once in a while, it won't happen again for so long that the cost is "amortized"
+
 #### API
 * Application Programming Interface
 * set of requirements that govern how one application can talk to another
