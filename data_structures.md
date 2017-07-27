@@ -38,6 +38,12 @@
   * reversal of word, undo, etc...
   * implement back functionality in web browsers
 
+### Queue
+* **FIFO** first in first out
+* collection of elements with two principal operations:
+  * `enqueue`/`dequeue` - add to the end, remove from the front
+* can be implemented using either array or linked list
+
 
 ## Binary Tree
 * a sequence of nodes in which there are a root node, left node, and right node.

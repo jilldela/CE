@@ -5,6 +5,9 @@
 * set of requirements that govern how one application can talk to another
 * allows for applications to share data and take actions by limiting outside program access to a specific set of features (without requiring developers to share all of the software's code)
 
+#### Asynchronous Programming
+* parallel programming in which a unit of work runs separately from the main thread and notifies the thread upon completion, failure, or progress
+
 #### Big O
 * the language and metric used to describe the efficiency of algorithms
 
@@ -118,3 +121,6 @@
 * Secure Sockets Layer
 * standard security technology for establishing an encrypted link between a web server and a browser
 * ensures all data passed between the web server and browsers remain private and integral
+
+#### Synchronous
+* Code is executed sequentially from top to bottom
