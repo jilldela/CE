@@ -56,6 +56,7 @@
 
 ## Hash Table
 * maps keys to values for highly efficient lookup
+* useful for search in an unsorted array
 * implemented using array of linked lists or balanced binary search tree
 * using array of linked lists:
   1. compute key's hash
