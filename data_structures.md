@@ -50,3 +50,6 @@
 
 ## Binary Tree
 * a sequence of nodes in which there are a root node, left node, and right node.
+
+## Hash Table
+* maps keys to values for highly efficient lookup

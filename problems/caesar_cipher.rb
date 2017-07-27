@@ -6,12 +6,13 @@ def caesar_cipher(string, shift)
   alpha = ('a'..'z').to_a
 
   cipher = ""
+  
   string.each_char.with_index do |ch, idx|
     if ch == " "
       cipher << " "
       next
     end
-    
+
     new_idx = alpha.index(ch) + shift
     new_idx = new_idx % alpha.length if new_idx > 25
 
