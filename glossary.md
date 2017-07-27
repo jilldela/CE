@@ -73,6 +73,9 @@
 * program in which the **data type of a data structure and its functions are defined**
 * organized around object rather than functions and data rather than logic
 
+#### O(log n)
+* runtime where the number of elements in the problem space gets halved each time
+
 #### ORM
 * **Object Relational Mapping**
 * system that translates between SQL and Ruby (or Java, Lisp, etc...) objects
