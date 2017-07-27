@@ -2,7 +2,15 @@
 
 ## Linear Data Structures
 
-* Array
+### Array
+* stores homogeneous elements at contiguous locations
+* **Accessing time: O(1)** by indexing into array
+* **Search time:** 
+  * **O(n)** sequentially
+  * **O(log n)** by Binary Search if array is sorted
+* **Insertion time: O(n)** if element inserted in beginning of array and all elements need to be shifted
+* **Deletion time: O(n)** same explanation as insertion
+
 * Linked List
 * Stack
 * Queue
