@@ -43,6 +43,9 @@
 * collection of elements with two principal operations:
   * `enqueue`/`dequeue` - add to the end, remove from the front
 * can be implemented using either array or linked list
+* **Insertion: O(1)**
+* **Deletion: O(1)**
+* **Access: O(n)**
 
 
 ## Binary Tree

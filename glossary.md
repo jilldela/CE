@@ -6,6 +6,7 @@
 * allows for applications to share data and take actions by limiting outside program access to a specific set of features (without requiring developers to share all of the software's code)
 
 #### Asynchronous Programming
+* engine runs in an event loop
 * parallel programming in which a unit of work runs separately from the main thread and notifies the thread upon completion, failure, or progress
 
 #### Big O
