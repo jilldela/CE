@@ -5,6 +5,7 @@
 ### ArrayList & Dynamically Resizable Arrays
 * stores homogeneous elements at contiguous locations
 * automatically resizable in some languages (i.e. Ruby)
+  * when the array hits capactiy, a new array with double the capacity will be created and copy all the elements over to the new array.
 * fixed length/defined size when array created in other languages (i.e. Java)
 * **Accessing time: O(1)** by indexing into array
 * **Search time:** 
