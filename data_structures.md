@@ -20,11 +20,23 @@
 * **doubly linked list** bi-directional with references to both previous and next nodes allowing traversal in both directions
 * **circular linked list** all nodes connected to form a circle; tail points to another node already in sequence; any node can be head
 * **Accessing time: O(n)**
-* **Search time: O(n)**
+* **Search time: O(n)** must traverse from head until node found
 * **Insertion time: O(1)**
 
 ### Stack
 * **LIFO** last in first out
+* collection of elements with two principal operations: 
+  * `push`/`pop` - adds/removes elements from end only
+* can be implemented using either array or linked list
+* **Insertion: O(1)**
+* **Deletion: O(1)**
+  * Insertion and deletion are only allowed from one end
+* **Access: O(n)**
+* Example implementations: 
+  * maintaining function calls
+  * check for balanced parenthesis
+  * reversal of word, undo, etc...
+  * implement back functionality in web browsers
 
 
 ## Binary Tree
