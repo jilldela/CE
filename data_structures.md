@@ -1,5 +1,12 @@
 # Data Structures
 
+## Linear Data Structures
+
+* Array
+* Linked List
+* Stack
+* Queue
+
 ## Binary Tree
 * a sequence of nodes in which there are a root node, left node, and right node.
 
