@@ -2,8 +2,10 @@
 
 ## Linear Data Structures
 
-### Array
+### Array/List & Resizable Arrays
 * stores homogeneous elements at contiguous locations
+* automatically resizable in some languages (i.e. Ruby)
+* fixed length in other (i.e. Java)
 * **Accessing time: O(1)** by indexing into array
 * **Search time:** 
   * **O(n)** sequentially
