@@ -53,3 +53,13 @@
 
 ## Hash Table
 * maps keys to values for highly efficient lookup
+* implemented using array of linked lists or balanced binary search tree
+* using array of linked lists:
+  1. compute key's hash
+  2. map hash to an index in the array [i.e. hash(key) % array.length]
+  3. store/retrieve the key-value pair at that index
+  * lookup is O(1) in most cases
+    * O(n) if # of collisions is high
+* using balanced binary search tree
+  * lookup is O(log n)
+  * potentially uses less space
