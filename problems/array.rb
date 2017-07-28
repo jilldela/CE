@@ -18,23 +18,38 @@ end
 # Because nums[0] + nums[1] = 2 + 7 = 9,
 # return [0, 1].
 
+# def two_sum(nums, target)
+#   nums.each_with_index do |num, idx|
+#     remainder = target - num
+    
+#     i = 0
+#     next if i == idx
+    
+#     while i < nums.length
+#       if nums[i] == remainder
+#           return [idx, i]
+#       end
+#       i += 1
+#     end
+#   end
+# end
+
+# BAD implementation because inefficient
+# O(n ^ 2)
+
 def two_sum(nums, target)
+  ind = {}
+
+  nums.each_with_index do |num, idx|
+    ind[num] = idx
+  end
+  
   nums.each_with_index do |num, idx|
     remainder = target - num
-    
-    i = 0
-    next if i == idx
-    
-    while i < nums.length
-      if nums[i] == remainder
-          return [idx, i]
-      end
-      i += 1
+    if ind[remainder] && ind[remainder] != idx
+      return [idx, ind[remainder]]
     end
   end
 end
 
 p two_sum([1, 3, 5, 7], 10) # == 1, 3
-
-# bad implementation because inefficient
-# O(n ^ 2)
