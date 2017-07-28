@@ -15,9 +15,9 @@ def is_unique(string)
   true
 end
 
-p is_unique("abba") #  == false
-p is_unique("abc") # == true
-p is_unique("abc car") # == false
+# p is_unique("abba") #  == false
+# p is_unique("abc") # == true
+# p is_unique("abc car") # == false
 
 # 1.
 # sort string but this makes O(log n)
@@ -32,3 +32,39 @@ p is_unique("abc car") # == false
 # else
 # change val in hash
 
+# ----------------------------
+
+# Write a function, longest_common_substring(str1, str2) that
+# takes two strings and
+# returns the longest common substring.
+# A substring is defined as any consecutive slice of letters from another string
+
+def longest_common_substring(str1, str2)
+  subs = []
+
+  i = 0
+  while i < str1.length
+    j = 1
+
+    while j < str1.length
+      sub = ""
+      sub << str1[i..j] if str1[i..j].length > 0
+      j += 1
+    end
+
+    subs << sub
+
+    i += 1
+  end
+
+  subs
+end
+
+p longest_common_substring('horseshoe', 'shoestring') # == 'shoe'
+p longest_common_substring('horseshoe', 'shoehorse') # == 'horse'
+
+# 1.
+# obtain all subs for str1
+# iterate through array of subs and check if str2 include sub
+# hold max length in variable max
+# return
