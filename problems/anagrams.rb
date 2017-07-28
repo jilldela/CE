@@ -14,8 +14,23 @@
 # 4
 
 def anagrams(a, b)
-  b_dels = (b.chars - a.chars).count
-  a_dels = (a.chars - b.chars).count
+  count = {}
 
-  p b_dels + a_dels
+  ('a'..'z').each do |ch|
+      count[ch] = 0
+  end
+
+  a.each_char do |ch|
+    count[ch] += 1
+  end
+
+  b.each_char do |ch|
+      if count[ch] > 0
+        count[ch] -= 1
+      else
+        count[ch] += 1
+      end
+  end
+
+  p count.values.inject(:+)
 end
