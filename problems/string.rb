@@ -20,7 +20,7 @@ p is_unique("abc") # == true
 p is_unique("abc car") # == false
 
 # 1.
-# sort string
+# sort string but this makes O(log n)
 # compare each char to preceding char
 # return false if char == preceding char
 
@@ -31,3 +31,4 @@ p is_unique("abc car") # == false
 # return false because ch already seen in string
 # else
 # change val in hash
+

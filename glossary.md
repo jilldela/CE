@@ -12,6 +12,12 @@
 * engine runs in an event loop
 * parallel programming in which a unit of work runs separately from the main thread and notifies the thread upon completion, failure, or progress
 
+#### AVL Tree
+* Georgy Adelson-Velsky and Landis' tree, named after the inventors
+* self-balancing binary search tree
+* the heights of the two child subtrees of any node differ by at most one
+  * if at any time the difference is greater than one, rebalancing is done to restore this property
+
 #### Big O
 * the language and metric used to describe the efficiency of algorithms
 
