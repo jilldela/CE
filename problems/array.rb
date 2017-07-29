@@ -71,5 +71,49 @@ def two_sum(nums, target)
     end
 end
 
-p two_sum([1, 3, 5, 7], 10) # == 1, 3
-p two_sum([4,4], 8) # == [0,1]
+# p two_sum([1, 3, 5, 7], 10) # == 1, 3
+# p two_sum([4,4], 8) # == [0,1]
+
+# -------------------------------------
+
+# Given an array of integers sorted in ascending order, find the starting and ending position of a given target value.
+
+# Your algorithm's runtime complexity must be in the order of O(log n).
+
+# If the target is not found in the array, return [-1, -1].
+
+# For example,
+# Given [5, 7, 7, 8, 8, 10] and target value 8,
+# return [3, 4].
+
+def search_range(nums, target)
+    mid = nums.length / 2
+    
+    left = bsearch(nums[0..mid], target)
+    
+    right = bsearch(nums[mid..-1], target)
+    right = mid + right if right != -1
+    
+    [left, right]
+end
+
+def bsearch(nums, target)
+    mid = nums.length / 2
+    left = nums[0...mid]
+    right = nums[mid+1..-1]
+    
+    return -1 if nums.empty?
+    
+    case target <=> nums[mid]
+        when -1
+            bsearch(left, target)
+        when 0
+            return mid
+        when 1
+            result = bsearch(right, target)
+            return result == -1 ? -1 : (mid + 1 + result)
+    end
+end
+
+p search_range([5, 7, 7, 8, 8, 10], 8)  == [3,4]
+p search_range([2,2], 2)  == [0,1]
