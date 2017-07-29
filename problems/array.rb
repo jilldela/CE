@@ -117,3 +117,32 @@ end
 
 p search_range([5, 7, 7, 8, 8, 10], 8)  == [3,4]
 p search_range([2,2], 2)  == [0,1]
+
+#  -----------------------------------------------------
+
+# Given a collection of distinct numbers, return all possible permutations.
+
+def permute(nums)
+    return [nums] if nums.length <= 1
+    
+    perms = permute(nums[1..-1])
+    
+    result = []
+    perms.each do |perm|
+      nums.length.times do |i|
+        result << perm[0...i] + [nums[0]] + perm[i..-1]
+      end
+    end
+    
+    result.sort
+end
+
+# p permute([1,2,3]) 
+# == [
+#   [1,2,3],
+#   [1,3,2],
+#   [2,1,3],
+#   [2,3,1],
+#   [3,1,2],
+#   [3,2,1]
+# ]
