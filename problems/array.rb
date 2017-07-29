@@ -34,20 +34,40 @@ end
 #   end
 # end
 
-# BAD implementation because inefficient
+# ^^ BAD implementation because inefficient
 # O(n ^ 2)
+
+# BETTER implementation
+# O(2n)
+
+# def two_sum(nums, target)
+#   ind = {}
+
+#   nums.each_with_index do |num, idx|
+#     ind[num] = idx
+#   end
+  
+#   nums.each_with_index do |num, idx|
+#     remainder = target - num
+#     if ind[remainder] && ind[remainder] != idx
+#       return [idx, ind[remainder]]
+#     end
+#   end
+# end
+
+# ONE pass through
+# O(n)
 
 def two_sum(nums, target)
   ind = {}
 
   nums.each_with_index do |num, idx|
     ind[num] = idx
-  end
-  
-  nums.each_with_index do |num, idx|
+    
     remainder = target - num
+    
     if ind[remainder] && ind[remainder] != idx
-      return [idx, ind[remainder]]
+      return [ind[remainder], idx]
     end
   end
 end
