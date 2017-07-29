@@ -146,3 +146,19 @@ end
 #   [3,1,2],
 #   [3,2,1]
 # ]
+
+# ----------------------------------
+
+# Given a set of distinct integers, nums, return all possible subsets.
+
+# Note: The solution set must not contain duplicate subsets.
+
+def subsets(nums)
+    return [[]] if nums.length <= 0
+    
+    subs = subsets(nums[0..-2])
+    
+    subs.concat(subs.map {|sub| sub += [nums[-1]]})
+end
+
+p subsets([1,2,3]) # == [[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]]
