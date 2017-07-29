@@ -59,17 +59,17 @@ end
 # O(n)
 
 def two_sum(nums, target)
-  ind = {}
-
-  nums.each_with_index do |num, idx|
-    ind[num] = idx
+  hash = {}
     
-    remainder = target - num
-    
-    if ind[remainder] && ind[remainder] != idx
-      return [ind[remainder], idx]
+    nums.each_with_index do |num, idx|
+      remainder = target - num
+      if hash[remainder]
+        return [hash[remainder], idx]
+      else
+        hash[num] = idx
+      end
     end
-  end
 end
 
 p two_sum([1, 3, 5, 7], 10) # == 1, 3
+p two_sum([4,4], 8) # == [0,1]
