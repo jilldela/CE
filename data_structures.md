@@ -53,6 +53,55 @@
 
 ## Binary Tree
 * a sequence of nodes in which there are a root node, left node, and right node.
+* trees are a type of graph
+
+### Why Trees?
+* to store information hierarchically (i.e. folders and files)
+* binary search trees somewhat efficient access/search (quicker than Linked Lists, slower than arrays)
+* moderate insertion/deletion ()
+
+### Balanced vs. Unbalanced
+#### Balanced Trees
+* red-black trees
+* AVL trees
+
+#### Complete Binary Trees
+* every level of the tree is fully filled left to right (with exception of last level being fully filled; as long as it is filled left to right!)
+
+#### Full Binary Trees
+* every node has either zero or two children (no node has only one child!)
+
+#### Perfect Binary Trees
+* binary tree that is **both full and complete**
+* all leaf nodes will be at the samel level and the level has the maximum number of nodes
+
+### Binary Tree Traversal
+
+#### In-Order Traversal
+* left, root, right (ascending order)
+
+``` ruby 
+  def in_order_traversal(node)
+    if node != nil
+      in_order_traversal(node.left)
+      return node
+      in_order_traversal(node.right)
+    end
+  end
+
+```
+
+#### Pre-Order Traversal
+* root, left, right
+
+#### Post-Order Traversal
+* left, right, root
+
+## Binary Search Tree
+* A binary search tree is a binary tree in which every node fits a specific ordering property
+  * all left descendents are <= node
+    * duplicates/equality may differ; clarify with interviewer for definition
+  * all right descendents are > node
 
 ## Hash Table
 * maps keys to values for highly efficient lookup

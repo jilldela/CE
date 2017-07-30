@@ -21,6 +21,11 @@
 #### Big O
 * the language and metric used to describe the efficiency of algorithms
 
+#### Binary Trees
+* data structure composed of nodes--a root with up to two children, left and right
+* why trees?
+  * to store information in a hierarchy
+
 #### Binding
 * capture environment (variables, methods, this/self, etc.) that are in-scope at the current point of a program and make them available in another context
 * encapsulate all of the in-scope variables and methods, storing them in an object, so that the current context can be passed around and used in another context
