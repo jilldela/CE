@@ -51,39 +51,39 @@
 * **Access: O(n)**
 
 
-## Binary Tree
+### Binary Tree
 * a sequence of nodes in which there are a root node, left node, and right node.
 * trees are a type of graph
 
-### Why Trees?
+#### Why Trees?
 * to store information hierarchically (i.e. folders and files)
 * binary search trees somewhat efficient access/search (quicker than Linked Lists, slower than arrays)
 * moderate insertion/deletion ()
 
-### When to use?
+#### When to use?
 * manipulate hierarchical data
 * easy search
 * manipulate sorted lists of data
 * decision making
 
-### Balanced vs. Unbalanced
-#### Balanced Trees
+#### Balanced vs. Unbalanced
+##### Balanced Trees
 * red-black trees
 * AVL trees
 
-#### Complete Binary Trees
+##### Complete Binary Trees
 * every level of the tree is fully filled left to right (with exception of last level being fully filled; as long as it is filled left to right!)
 
-#### Full Binary Trees
+##### Full Binary Trees
 * every node has either zero or two children (no node has only one child!)
 
-#### Perfect Binary Trees
+##### Perfect Binary Trees
 * binary tree that is **both full and complete**
 * all leaf nodes will be at the samel level and the level has the maximum number of nodes
 
-### Binary Tree Traversal
+#### Binary Tree Traversal
 
-#### In-Order Traversal
+##### In-Order Traversal
 * left, root, right (ascending order)
 
 ``` ruby 
@@ -97,19 +97,19 @@
 
 ```
 
-#### Pre-Order Traversal
+##### Pre-Order Traversal
 * root, left, right
 
-#### Post-Order Traversal
+##### Post-Order Traversal
 * left, right, root
 
-## Binary Search Tree
+### Binary Search Tree
 * A binary search tree is a binary tree in which every node fits a specific ordering property
   * all left descendents are <= node
     * duplicates/equality may differ; clarify with interviewer for definition
   * all right descendents are > node
 
-## Hash Table
+### Hash Table
 * maps keys to values for highly efficient lookup
 * useful for search in an unsorted array
 * implemented using array of linked lists or balanced binary search tree
@@ -122,3 +122,19 @@
 * using balanced binary search tree
   * lookup is O(log n)
   * potentially uses less space
+
+### Heaps (Min-Heaps and Max-Heaps)
+* **min-heap** is a complete binary tree where each node is **smaller** than its children
+  * root is the minimum element
+* **max-heap** is a complete binary tree where each node is **greater** than its children
+  * root is the maximum element
+
+#### Heaps Two Key Operations
+* `insert`
+  * O(log n)
+  1. always insert new element at the bottom, rightmost position (to maintain complete tree property)
+  2. "fix" the tree by swapping the new element with its parent, until element is in appropriate spot ("bubble up" minimum element)
+* `extract_min/max`
+  * O(log n)
+  1. remove the minimum element and replace with the last element in the heap (bottom, rightmost element)
+  2. "bubble down" swapped element -- swap with minimum child
