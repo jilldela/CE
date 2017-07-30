@@ -52,6 +52,9 @@
 #### DSL
 * **Domain Specific Language**
 
+#### Dynamic Programming (DP)
+* 
+
 #### Dynamically Typed
 * do not need to specify data type when declaring methods or variables
 * Ruby is dynamically typed

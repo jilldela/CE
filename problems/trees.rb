@@ -21,3 +21,19 @@ def is_same_tree(p, q)
     return false
   end
 end
+
+# ----------------------------
+
+# Invert a binary tree.
+
+def invert_tree(root)
+    return nil if root.nil?
+    
+    right = invert_tree(root.right)
+    left = invert_tree(root.left)
+    
+    root.right = left
+    root.left = right
+    
+    root
+end
