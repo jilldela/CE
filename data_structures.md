@@ -60,6 +60,12 @@
 * binary search trees somewhat efficient access/search (quicker than Linked Lists, slower than arrays)
 * moderate insertion/deletion ()
 
+### When to use?
+* manipulate hierarchical data
+* easy search
+* manipulate sorted lists of data
+* decision making
+
 ### Balanced vs. Unbalanced
 #### Balanced Trees
 * red-black trees
