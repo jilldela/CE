@@ -67,3 +67,43 @@ def reverse_list(head)
     
     return prev
 end
+
+# ----------------------------------
+# Remove all elements from a linked list of integers that have value val.
+
+# Example
+# Given: 1 --> 2 --> 6 --> 3 --> 4 --> 5 --> 6, val = 6
+# Return: 1 --> 2 --> 3 --> 4 --> 5
+
+# Definition for singly-linked list.
+# class ListNode
+#     attr_accessor :val, :next
+#     def initialize(val)
+#         @val = val
+#         @next = nil
+#     end
+# end
+
+def remove_elements(head, val)
+    return head if head.nil?
+    
+    prev = head
+    current = head
+    
+    
+    while current != nil
+        if head.val == val
+            current = head.next
+            head = head.next
+        elsif current.val == val
+            prev.next = current.next
+            current = current.next
+        else
+            prev = current
+            current = current.next
+        end
+            
+    end
+    
+    head
+end
