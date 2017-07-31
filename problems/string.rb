@@ -60,11 +60,37 @@ def longest_common_substring(str1, str2)
   subs
 end
 
-p longest_common_substring('horseshoe', 'shoestring') # == 'shoe'
-p longest_common_substring('horseshoe', 'shoehorse') # == 'horse'
+# p longest_common_substring('horseshoe', 'shoestring') # == 'shoe'
+# p longest_common_substring('horseshoe', 'shoehorse') # == 'horse'
 
 # 1.
 # obtain all subs for str1
 # iterate through array of subs and check if str2 include sub
 # hold max length in variable max
 # return
+
+# ---------------------
+# Define a method, all_anagrams, that 
+# takes a string and 
+# returns an array of all the unique combinations
+
+def all_anagrams(string)
+  return [string] if string.length <= 1
+
+  options = all_anagrams(string[1..-1])
+
+  result = []
+
+  options.each do |sub|
+    string.length.times do |i|
+      result << sub[0...i] + string[0] + sub[i..-1]
+    end
+  end
+
+  result
+end
+
+p all_anagrams('') # == []
+p all_anagrams('a') # == ['a']
+p all_anagrams('ab') # == ['ab', 'ba']
+p all_anagrams('abc') ## == ['abc', 'acb', 'bac', 'bca', 'cab', cba']
