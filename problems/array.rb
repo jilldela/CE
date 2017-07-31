@@ -162,3 +162,18 @@ def subsets(nums)
 end
 
 # p subsets([1,2,3]) # == [[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]]
+
+# ------------------------------
+
+# Given an array of integers, find if the array contains any duplicates. 
+# Your function should return true if any value appears at least twice in the array, 
+# and it should return false if every element is distinct.
+
+def contains_duplicate(nums)
+    set = Hash.new(0)
+    nums.each do |num|
+        return true if set[num] > 0
+        set[num] += 1
+    end
+    false
+end

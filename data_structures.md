@@ -138,3 +138,11 @@
   * O(log n)
   1. remove the minimum element and replace with the last element in the heap (bottom, rightmost element)
   2. "bubble down" swapped element -- swap with minimum child
+
+### Set
+* abstract data structure that does not have duplicates; all same data type
+* not ordered
+* can implement through array
+* `include?` O(n)
+* `insert` O(n)
+* `delete` O(n)

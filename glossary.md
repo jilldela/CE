@@ -111,6 +111,9 @@
 #### Pure Function
 * a function which **given the same inputs, always returns the same output and has no side-effects**
 
+### RAM
+* **Random Access Memory**
+
 ### RDBMS
 * **Relational Database Management Systems**
 * way to organize data and their relationships, persisting that data and querying that data

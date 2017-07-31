@@ -40,3 +40,30 @@ end
 def merge_two_lists(l1, l2)
     l1.val
 end
+
+# -------------------------------
+
+# Reverse a singly linked list.
+
+# Definition for singly-linked list.
+# class ListNode
+#     attr_accessor :val, :next
+#     def initialize(val)
+#         @val = val
+#         @next = nil
+#     end
+# end
+
+def reverse_list(head)
+    prev = nil
+    current = head
+    
+    while current != nil
+        next_node = current.next
+        current.next = prev
+        prev = current
+        current = next_node
+    end
+    
+    return prev
+end
