@@ -39,26 +39,26 @@ end
 # returns the longest common substring.
 # A substring is defined as any consecutive slice of letters from another string
 
-def longest_common_substring(str1, str2)
-  subs = []
+# def longest_common_substring(str1, str2)
+#   subs = []
 
-  i = 0
-  while i < str1.length
-    j = 1
+#   i = 0
+#   while i < str1.length
+#     j = 1
 
-    while j < str1.length
-      sub = ""
-      sub << str1[i..j] if str1[i..j].length > 0
-      j += 1
-    end
+#     while j < str1.length
+#       sub = ""
+#       sub << str1[i..j] if str1[i..j].length > 0
+#       j += 1
+#     end
 
-    subs << sub
+#     subs << sub
 
-    i += 1
-  end
+#     i += 1
+#   end
 
-  subs
-end
+#   subs
+# end
 
 # p longest_common_substring('horseshoe', 'shoestring') # == 'shoe'
 # p longest_common_substring('horseshoe', 'shoehorse') # == 'horse'
