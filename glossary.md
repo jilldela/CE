@@ -1,5 +1,18 @@
 # Glossary
 
+#### ACID
+* **Atomicity, Consistency, Isolation, Durability**
+* set of properties of a database intended to guarantee validity even in the event of errors, power failures, etc.
+* **Atomicity**
+  * each transaction is "all or nothing"; if one part fails, the whole transaction fails
+* **Consistency**
+  * any transaction will bring the DB from one valid state to another
+  * Any data written to the database must be valid according to all defined rules, including constraints, cascades, triggers, and any combination thereof. 
+* **Isolation**
+  * concurrent execution of transactions results in a system state that would be obtained as if the transactions were executed sequentially
+* **Durability**
+  * once a transaction has been committed, it will remain permanently
+
 #### Amortized Time
 * while worst case (O(n)) happens every once in a while, it won't happen again for so long that the cost is "amortized"
 
