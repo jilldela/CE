@@ -94,3 +94,33 @@ p all_anagrams('') # == []
 p all_anagrams('a') # == ['a']
 p all_anagrams('ab') # == ['ab', 'ba']
 p all_anagrams('abc') ## == ['abc', 'acb', 'bac', 'bca', 'cab', cba']
+
+# -------------------------------
+# Given two strings s and t, write a function to determine if t is an anagram of s.
+
+# For example,
+# s = "anagram", t = "nagaram", return true.
+# s = "rat", t = "car", return false.
+
+def is_anagram(s, t)
+    s_count = Hash.new(0)
+    t_count = Hash.new(0)
+    
+    s.each_char do |ch|
+        s_count[ch] += 1
+    end
+    
+    t.each_char do |ch|
+        t_count[ch] += 1
+    end
+    
+    t.each_char do |ch|
+        return false if s_count[ch] != t_count[ch]
+    end
+    
+    s.each_char do |ch|
+        return false if s_count[ch] != t_count[ch]
+    end
+    
+    true
+end
