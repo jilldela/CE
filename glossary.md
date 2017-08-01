@@ -18,6 +18,11 @@
 * the heights of the two child subtrees of any node differ by at most one
   * if at any time the difference is greater than one, rebalancing is done to restore this property
 
+#### BFS
+* **Breadth-First Search**
+* layer by layer from left to right
+* implemented using a queue
+
 #### Big O
 * the language and metric used to describe the efficiency of algorithms
 
@@ -53,6 +58,11 @@
 
 #### Database Schema
 * description of the organization of your database into tables and columns and datatypes
+
+#### DFS
+* **Depth-First Search**
+* straight to leaf node then back up
+* implement using recursion 
 
 #### DSL
 * **Domain Specific Language**

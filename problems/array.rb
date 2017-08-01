@@ -177,3 +177,32 @@ def contains_duplicate(nums)
     end
     false
 end
+
+# ----------------------------
+
+# If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. 
+# The sum of these multiples is 23.
+
+# Find the sum of all the multiples of 3 or 5 below 1000.
+
+def multiples(n)
+    i = 3
+    j = 5
+
+    sum = 0
+    while i < n
+        sum += i
+
+        i += 3
+    end
+
+    while j < n
+        sum += j
+
+        j += 5
+    end
+
+    sum
+end
+
+p multiples(1000)
