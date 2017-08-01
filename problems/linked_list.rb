@@ -107,3 +107,31 @@ def remove_elements(head, val)
     
     head
 end
+
+# ----------------------------------------
+# Given a sorted linked list, delete all duplicates such that each element appear only once.
+
+# For example,
+# Given 1->1->2, return 1->2.
+# Given 1->1->2->3->3, return 1->2->3.
+
+def delete_duplicates(head)
+    return head if head.nil? 
+    
+    prev = head
+    current = head
+    
+    while current != nil        
+        if prev.val != current.val
+            prev.next = current
+            prev = current
+        elsif prev.val == current.val
+            prev.next = current.next
+        end
+        
+        current = current.next
+    end
+    
+    head
+end
+
