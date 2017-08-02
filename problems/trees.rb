@@ -108,6 +108,8 @@ end
 
 # root = *
 
+require 'byebug'
+
 class Node
     attr_accessor :val, :children
     def initialize(val)
@@ -118,25 +120,65 @@ class Node
     def add_child(val)
         child = Node.new(val)
         @children[val] = child
+        child
+    end
+
+    def find_child(val)
+      return self if self.val == val
+      @children[val]
     end
 end
 
-class Tree 
-    attr_reader :root
-    def initialize(node)
-        @root = node
-    end
+# class Tree 
+#     attr_reader :root
+#     attr_accessor :children
+#     def initialize(node)
+#         @root = node
+#         @children = @root.children
+#     end
     
-    def add_node(val)
-        node = Node.new(val)
-        @root.children[val] = node
-    end
+#     def add_child(val)
+#         node = Node.new(val)
+#         @root.children[val] = node
+#     end
     
-    def find_node(val)
-        if @root.children[val]
-            return @root.children[val]
+#     def find_child(val)
+#         return @root if @root.val == val
+#         if @root.children[val]
+#             return @root.children[val]
+#         end
+#     end
+
+#     def get_children
+#       @children.keys
+#     end
+# end
+
+class Tree
+  attr_accessor :root
+
+  def initialize(data)
+    @root = Node.new("*")
+    
+    data.each do |el|
+        tree = @root
+        
+        el.each_char do |ch|
+            node = tree.find_child(ch)
+
+            if node
+              tree = node
+            else
+              node = tree.add_child(ch)
+              tree = node
+            end
         end
+
+        tree.add_child(el)
     end
+
+    @root
+  end
 end
 
 # facebook
@@ -144,30 +186,48 @@ end
 # faceswap
 # root <> f <> a <> c <> e -> s -> w -> a -> p
 
-def build_tree(data)
-    root = Tree.new(Node.new("*"))
-    
-    data.each do |el|
-        tree = root
-        
-        el.each_char do |ch|
-            node = tree.find_node(ch)
-            tree.add_node(ch) unless node
-            tree = node
-        end
-    end
-end
-
 def search(dataset, prefix)
-  node = nil
+  tree = dataset.root  # start search at root node
+
   prefix.each_char do |ch|
-    node = dataset.find_node(ch)
+    node = tree.find_child(ch) 
+
+    if node
+      tree = node
+    else
+      return nil
+    end
   end
-  return node.children
+
+  get_leaves(tree)
 end
 
-tree = build_tree(['facebook', 'faceswap', 'facematch', 'facegram', 'faceword', 'zen', 'zenefits'])
-p tree
+def get_leaves(tree)
+  leaf_nodes = []
+
+  if tree.children.empty?
+    leaf_nodes << tree.val 
+  else
+    tree.children.values.each do |child|
+      leaf_nodes << get_leaves(child)
+    end
+  end
+
+  leaf_nodes.flatten
+end
+
+if __FILE__ == $PROGRAM_NAME
+  tree = Tree.new(['facebook', 'faceswap', 'facematch', 'facegram', 'faceword', 'zen', 'zenefits'])
+  test = Tree.new(['food', 'fork', 'feed'])
+  p "search: 'face' = #{search(tree, 'face')}"
+  p "search: 'zen' = #{search(tree, 'zen')}"
+  p "search: 'faceb' = #{search(tree, 'faceb')}"
+
+  p search(test, 'f')
+  p search(test, 'fo')
+  p search(test, 'foc')
+end
+
 # mahesh@zenefits.com
 
 
