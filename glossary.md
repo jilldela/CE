@@ -81,7 +81,7 @@
 * **Domain Specific Language**
 
 #### Dynamic Programming (DP)
-* 
+* method for solving a complex problem **by breaking it down into a collection of simpler subproblems, solving each of those subproblems just once and storing their values**
 
 #### Dynamically Typed
 * do not need to specify data type when declaring methods or variables
@@ -174,3 +174,7 @@
 
 #### Synchronous
 * Code is executed sequentially from top to bottom
+
+#### Topological Sort
+* used on **Directed Acyclic Graph (DAG)**
+* **linear ordering of vertices** such that for every directed edge (u, v) vertex u comes before v in the ordering
