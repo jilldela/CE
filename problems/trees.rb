@@ -216,7 +216,7 @@ def get_leaves(tree)
   leaf_nodes.flatten
 end
 
-if __FILE__ == $PROGRAM_NAME
+# if __FILE__ == $PROGRAM_NAME
   tree = Tree.new(['facebook', 'faceswap', 'facematch', 'facegram', 'faceword', 'zen', 'zenefits'])
   test = Tree.new(['food', 'fork', 'feed'])
   p "search: 'face' = #{search(tree, 'face')}"
@@ -226,11 +226,46 @@ if __FILE__ == $PROGRAM_NAME
   p search(test, 'f')
   p search(test, 'fo')
   p search(test, 'foc')
-end
+# end
 
 # mahesh@zenefits.com
 
+# ------------------------------------------
+# Given a binary tree, check whether it is a mirror of itself (ie, symmetric around its center).
 
+# For example, this binary tree [1,2,2,3,4,4,3] is symmetric:
+
+#     1
+#    / \
+#   2   2
+#  / \ / \
+# 3  4 4  3
+# But the following [1,2,2,null,3,null,3] is not:
+#     1
+#    / \
+#   2   2
+#    \   \
+#    3    3
+
+def is_symmetric(root) 
+    queue = [root, root]
+    
+    until queue.empty?
+        node1 = queue.shift
+        node2 = queue.shift
+        
+        next if node1.nil? && node2.nil?
+        return false if node1.nil? || node2.nil?
+        return false if node1.val != node2.val
+        
+        queue << node1.left
+        queue << node2.right
+        queue << node1.right
+        queue << node2.left
+    end
+    
+    true
+end
 
 
 
