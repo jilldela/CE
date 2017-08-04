@@ -48,7 +48,17 @@
 * capture environment (variables, methods, this/self, etc.) that are in-scope at the current point of a program and make them available in another context
 * encapsulate all of the in-scope variables and methods, storing them in an object, so that the current context can be passed around and used in another context
 
-### CDN
+#### Caching
+* key-value pairing
+* when an application request a piece of information, it first checks the cache.
+  * if the cache does not contain the key, it will then look up the data in the data store
+* whhen you cache, 
+  * you might cache a query and its results directly
+  * you can cache the specific object
+* typically sits between application layer and data store
+* cache can deliver rapid results
+
+#### CDN
 * Content Delivery Network
 * system of distributed servers and their data centers that deliver pages and other web content based on geographic location of the user 
 * used to distribute service spatially relative to end-users to provide high availability and high performance
