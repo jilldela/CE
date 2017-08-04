@@ -30,3 +30,8 @@
   * issued by the website to your browser
   * this certificate contains the public key needed to begin the secure session
   * initiates 'SSL Handshake'
+
+#### If I go to a site like gmail.com, I can login and see my email. If I close my browser and turn off my computer for a few days, the next time I turn it on and visit gmail.com, it shows my email without me having to login again. How does this work?
+* when you visit a site, your browser sends a request to the site. The site's server will check your login information and then create a response, including session tokens, and send it back to your browser. Your browser will then store the session token by creating a cookie--data with information--storing the authentication information that was retrieved from the server site that you've visited. When you return to the same site later, the browser sends back the session token from the cookie to the server. The server will verify the information in the request and see that youve visited before. Sometimes the cookies will have an expiration date, which will then cause you to login again.
+
+#### What's a hash table and how does it work? What's a collision? How does a hash table handle collisions?
