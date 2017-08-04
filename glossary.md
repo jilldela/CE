@@ -79,6 +79,12 @@
 * consists of a name, value, and other optional attributes
 * Cookies are added to the client's browser by putting them into the response
 
+#### Database Denormalization
+* adding redundant information into a database to speed up reads
+  * e.g. database describing projects and tasks (project has many tasks)
+    * get project and task information
+      * store the project name within the task table (without using a joins)
+
 #### Database Schema
 * description of the organization of your database into tables and columns and datatypes
 
