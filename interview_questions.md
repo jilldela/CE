@@ -37,3 +37,10 @@
 #### What's a hash table and how does it work? What's a collision? How does a hash table handle collisions?
 * data structure that maps keys to values for efficient lookup
 * when key-value pairs are being inserted into hash table, the key is hashed. When two different keys are hashed to the same exact hash code, this creates a collision. Usually in hash tables, the keys are hashed by using the modulo to determine which index to insert the pair. You could create your hash table to have linked lists within the index of the array. This way, if two different keys are hashed to the same index, you preserve both pairs rather than overwrite one.
+
+#### Whats horizontal vs vertical scaling?
+* systems can be scaled in one of two ways:
+  * **vertical scaling** -- **increasing the resources** of a specific node.
+    * i.e. **add additional memory** to a server to improve its ability to handle load changes
+  * **horizontal scaling** -- **increasing the number** of nodes. 
+    * i.e. **add addition servers** to decrease the load on any one server
