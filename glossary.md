@@ -109,6 +109,11 @@
 #### Linked List
 * **sequence of nodes** in which each node holds the value/data for the node and a pointer/reference to the next node in the list. Connections can be uni-directional (singly linked list) with reference to only the next node or bi-directional (doubly linked list) with reference to both previous and next nodes.
 
+#### Load Balancer
+* device that acts as a reverse proxy
+* distributes load evenly across a network of servers
+* increases capacity and reliability of applications
+
 #### Memoization
 * optimization technique used to speed up programs **by storing results of expensive function calls & returning the cached results when the same inputs occur again**
 
