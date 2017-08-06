@@ -79,7 +79,7 @@
 * consists of a name, value, and other optional attributes
 * Cookies are added to the client's browser by putting them into the response
 
-#### Database Denormalization
+#### Denormalization (Database)
 * adding redundant information into a database to speed up reads
   * e.g. database describing projects and tasks (project has many tasks)
     * get project and task information
@@ -158,6 +158,13 @@
 #### Pure Function
 * a function which **given the same inputs, always returns the same output and has no side-effects**
 
+#### Radix Sort
+* Runtime O(kn)
+* sorting algorith for integers (and some other data types) that takes advatage of the fact that integers have a finite number of bits
+* iterate through each digit of the number, grouping numbers by each digit
+* sort each of these groupings by the next digit
+* repeat sorting process by each subsequent digit until the whole array is sorted
+
 ### RAM
 * **Random Access Memory**
 
@@ -172,6 +179,11 @@
 #### Side Effects
 * any application state change that is observable outside the function being called other than its return value
 * i.e. modification of external variable or object property; triggering external process; console log; writing to screen, file, or network
+
+#### Sharding (or Partitioning for DBs)
+* splitting the data across multiple machins while ensuring you have a way of figuring out which data is on on which machine
+  * **Vertical partitioning**--partition by feature
+  * **Key-based/Hash-based**--uses some part of the data
 
 #### Shared State
 * any variable, object, or memory space that exists in a shared scope, or as the property of an object being passed between scopes
