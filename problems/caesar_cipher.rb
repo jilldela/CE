@@ -24,3 +24,4 @@ end
 
 p caesar_cipher('delta', 3) # == 'ghowd'
 p caesar_cipher('alpha omega', 3) # == 'doskd rphjd'
+p caesar_cipher('asdf asdf', 13) # == 'nfqs nfqs'
