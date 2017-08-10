@@ -44,3 +44,15 @@
     * i.e. **add additional memory** to a server to improve its ability to handle load changes
   * **horizontal scaling** -- **increasing the number** of nodes. 
     * i.e. **add addition servers** to decrease the load on any one server
+
+#### What is MVC?
+* **MVC** stands for **Model-View-Controller**
+* MVC is a structural design how to transfer data between client and server
+* **Model** adds, retrieves, and processes data to and from the database
+  * the controller tells which model to instantiate
+* **View** is what the browser displays to the user
+  * controller tells which view to display
+* **Controller** processes requests from the user
+  * takes the info from the view and processes GET/POST/PUT/DELETE requests
+  * instantiates the appropriate model based off the request to get information from the DB
+  * gives information back to the view to display to the user

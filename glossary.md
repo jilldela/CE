@@ -126,6 +126,11 @@
 #### Mutability
 * can be modified after creation
 
+#### MVC
+* **Model-View-Controller**
+* architectural paradigm -- way to structure application
+* used by most frameworks
+
 #### OAuth
 * authentication protocol that allows you to approve one application interacting with another on your behalf **without giving away your password**
 * allows for granular permission levels
