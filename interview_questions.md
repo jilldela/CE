@@ -53,6 +53,6 @@
 * **View** is what the browser displays to the user
   * controller tells which view to display
 * **Controller** processes requests from the user
-  * takes the info from the view and processes GET/POST/PUT/DELETE requests
+  * routes takes the info from the view and processes GET/POST/PUT/DELETE requests to tell which controller to instantiate
   * instantiates the appropriate model based off the request to get information from the DB
-  * gives information back to the view to display to the user
+  * gives information from model back to the view to display to the user
