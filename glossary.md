@@ -173,6 +173,25 @@
 * way to organize data and their relationships, persisting that data and querying that data
 * data organized in tables
 
+### REST
+* **Representational State Transfer**
+* architectural style for describing hypermedia systems and state information
+* six constraints:
+  * uniform interface
+    * all components must interact through single uniform interface
+    * REST is optimized for web which mainly uses HTTP
+      * HTTP methods mainly used are GET, POST, PUT, DELETE
+  * stateless
+    * all state must be kept on the client side
+    * each request must declare state
+    * server must be able to understand the client request without using any server context or server session state
+  * cacheable
+    * constraints may be declared in response as cacheable or non-cacheable
+    * cacheable data may be reused as the response for the subsequent request
+  * client-server
+    * distinct separation of concerns
+
+
 #### Router
 * matches requested paths to the appropriate controller, instantiate the route's controller, and run the appropriate action/method within the controller
 
