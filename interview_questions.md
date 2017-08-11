@@ -31,21 +31,21 @@
   * this certificate contains the public key needed to begin the secure session
   * initiates 'SSL Handshake'
 
-#### If I go to a site like gmail.com, I can login and see my email. If I close my browser and turn off my computer for a few days, the next time I turn it on and visit gmail.com, it shows my email without me having to login again. How does this work?
+## If I go to a site like gmail.com, I can login and see my email. If I close my browser and turn off my computer for a few days, the next time I turn it on and visit gmail.com, it shows my email without me having to login again. How does this work?
 * when you visit a site, your browser sends a request to the site. The site's server will check your login information and then create a response, including session tokens, and send it back to your browser. Your browser will then store the session token by creating a cookie--data with information--storing the authentication information that was retrieved from the server site that you've visited. When you return to the same site later, the browser sends back the session token from the cookie to the server. The server will verify the information in the request and see that youve visited before. Sometimes the cookies will have an expiration date, which will then cause you to login again.
 
-#### What's a hash table and how does it work? What's a collision? How does a hash table handle collisions?
+## What's a hash table and how does it work? What's a collision? How does a hash table handle collisions?
 * data structure that maps keys to values for efficient lookup
 * when key-value pairs are being inserted into hash table, the key is hashed. When two different keys are hashed to the same exact hash code, this creates a collision. Usually in hash tables, the keys are hashed by using the modulo to determine which index to insert the pair. You could create your hash table to have linked lists within the index of the array. This way, if two different keys are hashed to the same index, you preserve both pairs rather than overwrite one.
 
-#### Whats horizontal vs vertical scaling?
+## Whats horizontal vs vertical scaling?
 * systems can be scaled in one of two ways:
   * **vertical scaling** -- **increasing the resources** of a specific node.
     * i.e. **add additional memory** to a server to improve its ability to handle load changes
   * **horizontal scaling** -- **increasing the number** of nodes. 
     * i.e. **add addition servers** to decrease the load on any one server
 
-#### What is MVC?
+## What is MVC?
 * **MVC** stands for **Model-View-Controller**
 * MVC is a structural design how to transfer data between client and server
 * **Model** adds, retrieves, and processes data to and from the database
@@ -56,3 +56,13 @@
   * routes takes the info from the view and processes GET/POST/PUT/DELETE requests to tell which controller to instantiate
   * instantiates the appropriate model based off the request to get information from the DB
   * gives information from model back to the view to display to the user
+
+## What is a single point of failure in regards to web architecture?
+* 
+
+## What's a CDN and what are the advantages and disadvantages of using one?
+* **CDN** stand for **content delivery network**
+* CDN is a globally distributed network of proxy servers, serving content from locations closer to the user.
+* Serving content from CDNs can significantly improve performance in two ways:
+  * users receive content from data servers closer to them
+  * your servers do not have to serve requests that the CDN fulfills
