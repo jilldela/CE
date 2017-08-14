@@ -13,6 +13,16 @@
 * **Durability**
   * once a transaction has been committed, it will remain permanently
 
+#### Agile
+* way of work that allows product creators to easily adjust to stakeholder and user needs
+* allows team members to to collaborate to decide on the most effective and efficient ways to complete work while making sure that the end users receive what they want and need. **focus on people and interactions not processes and tools**
+* methodology based on the following values and principles:
+  * individuals and interactions over processes and tools
+  * working software over comprehensive documentation
+  * customer collaboration over contract negotiation
+  * responding to change over following a plan
+* 
+
 #### Amortized Time
 * while worst case (O(n)) happens every once in a while, it won't happen again for so long that the cost is "amortized"
 
@@ -203,6 +213,15 @@
 
 #### Router
 * matches requested paths to the appropriate controller, instantiate the route's controller, and run the appropriate action/method within the controller
+
+#### Scrum
+1. product owner creates a **product backlog**--prioritized wish list
+2. during sprint planning, the team pulls a small chunk from the top of the wish list, a sprint backlog, and decides how to implement those pieces
+3. the team has a certain amount of time (**sprint**--usually 2-4 weeks) to complete the work. meet each day to assess its progress (daily Scrum)
+4. ScrumMaster keeps team focused on goal
+5. at the end of the sprint, the work should be potentially shippable
+6. sprint ends with a sprint review and retrospective
+7. team chooses another chunk of product backlog and repeats starting at step 1.
 
 #### Side Effects
 * any application state change that is observable outside the function being called other than its return value
