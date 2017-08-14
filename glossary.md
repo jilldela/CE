@@ -106,6 +106,10 @@
 #### Function Composition
 * the process of combining two or more functions in order to produce a new function or perform a computation.
 
+#### Functional Design
+* assures that each modular part of a device has only one responsibility and performs that responsibility with the minimum of side effects on other parts
+* each function serves single purpose
+
 #### Functional Programming (FP)
 * process of building software by composing **pure functions, avoiding shared state, mutable data, and side effects**
 
