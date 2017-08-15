@@ -137,6 +137,10 @@
 #### Memoization
 * optimization technique used to speed up programs **by storing results of expensive function calls & returning the cached results when the same inputs occur again**
 
+#### Monolithic Application
+* single-tiered software application in which the user interface and data access code are combined into a single program from a single platform
+* self-contained and independent from other computing applications
+
 #### Mutability
 * can be modified after creation
 
