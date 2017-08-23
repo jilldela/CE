@@ -170,3 +170,36 @@ anagrams('racecar', 'carshow') # == 8
 
 # Input is guaranteed to be within the range from 1 to 3999.
 
+def roman_to_int(s)
+    roman = {
+        "I" => 1,
+        "V" => 5,
+        "X" => 10,
+        "L" => 50,
+        "C" => 100,
+        "D" => 500,
+        "M" => 1000
+        }
+    
+    sum = 0
+    
+    i = 0
+    while i <= s.length - 1
+        j = i + 1
+        
+        if j == s.length
+            sum += roman[s[i]] 
+            break
+        end
+        
+        if roman[s[i]] < roman[s[j]]
+            sum -= roman[s[i]]
+        else
+            sum += roman[s[i]]
+        end
+        
+        i += 1
+    end
+    
+    sum
+end
