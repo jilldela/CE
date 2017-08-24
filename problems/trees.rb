@@ -316,7 +316,36 @@ end
 #    \   \
 #     4   7
 
+def delete_node(root, key)
+    return root if root.nil?
+    
+    if root.val > key
+        root.left = delete_node(root.left, key)
+    elsif root.val < key
+        root.right = delete_node(root.right, key)
+    else
+        return nil if root.left.nil? && root.right.nil?
+        
+        return root.left if root.right.nil?
+        return root.right if root.left.nil?
+        
+        root.val = get_min(root.right)
+        root.right = delete_node(root.right, root.val)
+    end
+        
+    root
+end
 
+def get_min(root)
+    min = root.val
+    
+    while root.left != nil
+        root = root.left
+        min = root.val
+    end
+    
+    min
+end
 
 
 
