@@ -1,5 +1,8 @@
 # Glossary
 
+#### Abstract Data Type (ADT)
+* high-level description of a structure and an API (specific set of methods)
+
 #### ACID
 * **Atomicity, Consistency, Isolation, Durability**
 * set of properties of a database intended to guarantee validity even in the event of errors, power failures, etc.
