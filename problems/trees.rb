@@ -346,6 +346,3 @@ def get_min(root)
     
     min
 end
-
-
-
