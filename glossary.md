@@ -227,6 +227,10 @@
 6. sprint ends with a sprint review and retrospective
 7. team chooses another chunk of product backlog and repeats starting at step 1.
 
+#### Set
+* data type that can store unordered unique items
+* won't store duplicates
+
 #### Side Effects
 * any application state change that is observable outside the function being called other than its return value
 * i.e. modification of external variable or object property; triggering external process; console log; writing to screen, file, or network
