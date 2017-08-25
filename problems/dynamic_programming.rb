@@ -64,3 +64,24 @@ p maximal_square(["1111","1111","1111"])
 # Given target = 5, return true.
 
 # Given target = 20, return false.
+
+def search_matrix(matrix, target)
+    if matrix.nil? || matrix.length < 1 || matrix[0].length < 1
+        return false
+    end
+    
+    row = 0
+    col = matrix[0].length - 1
+    
+    while col >= 0 && row <= matrix.length - 1
+        if target == matrix[row][col]
+            return true
+        elsif target > matrix[row][col]
+            row += 1
+        elsif target < matrix[row][col]
+            col -= 1
+        end
+    end
+    
+    false
+end
