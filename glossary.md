@@ -128,6 +128,7 @@
 
 #### Hash Function
 * sequence of mathematical operations that deterministically maps any arbitrary data into a pre-defined range of values
+* produces the same value given the same input
 
 #### Immutability
 * cannot be modified after creation
