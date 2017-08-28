@@ -206,3 +206,34 @@ def multiples(n)
 end
 
 p multiples(1000)
+
+# -------------------------------------------
+
+# Given an unsorted array of integers, find the length of the longest consecutive elements sequence.
+
+# For example,
+# Given [100, 4, 200, 1, 3, 2],
+# The longest consecutive elements sequence is [1, 2, 3, 4]. Return its length: 4.
+
+# Your algorithm should run in O(n) complexity.
+
+def longest_consecutive(nums)
+    return 0 if nums.empty?
+    max, count = 1, 1
+    
+#     why move count here? why keep track of index?
+#     like how you talked about indexing into array
+    sorted = nums.sort!
+    sorted.each_with_index do |el, idx|
+        break if idx == sorted.length - 1
+        if sorted[idx + 1] == el + 1
+            count += 1 
+            max = count if count > max 
+        elsif el == sorted[idx + 1]
+            next
+        else 
+            count = 1
+        end 
+    end 
+    max
+end
