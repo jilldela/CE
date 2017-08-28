@@ -126,6 +126,9 @@
 #### Functional Programming (FP)
 * process of building software by composing **pure functions, avoiding shared state, mutable data, and side effects**
 
+#### Hash Function
+* sequence of mathematical operations that deterministically maps any arbitrary data into a pre-defined range of values
+
 #### Immutability
 * cannot be modified after creation
 
