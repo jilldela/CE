@@ -27,4 +27,4 @@
 * preload components
 
 #### Client-side
-* 
+* enable asset caching with Etags or remove Etags altogether
