@@ -12,16 +12,35 @@
 # removeKFromList(l, k) = [1, 2, 3, 4, 5, 6, 7].
 
 # Definition for singly-linked list:
-# class ListNode
-#   attr_accessor :value, :next
-#   def initialize(val)
-#     @value = val
-#     @next = nil
-# end
-#
-def removeKFromList(l, k)
-
+class ListNode
+  attr_accessor :value, :next
+  def initialize(val)
+    @value = val
+    @next = nil
 end
+#
+def remove_k_from_list(l, k)
+    prev = l
+    current = l
+
+    until current.nil?
+        if l.val == k
+            l = l.next
+        elsif current.val == k
+            prev.next = current.next
+        else
+            prev = current
+        end
+            
+        current = current.next
+
+    end
+
+    l
+end
+
+p remove_k_from_list([3, 1, 2, 3, 4, 5], 3) # == [1, 2, 4, 5]
+p remove_k_from_list([1, 2, 3, 4, 5, 6, 7], 10) #== [1, 2, 3, 4, 5, 6, 7]
 
 # ---------------------------------------------------
 
