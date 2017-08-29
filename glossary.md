@@ -92,6 +92,11 @@
 * consists of a name, value, and other optional attributes
 * Cookies are added to the client's browser by putting them into the response
 
+#### CSRF
+* **Cross-Site Request Forgery**
+* attack that causesa user's web browser to perform an unwanted action
+* occurs when a malicious web site, email, blog, instant message makes a target system perform a function via the target's browser without target user's knowledge
+
 #### Denormalization (Database)
 * adding redundant information into a database to speed up reads
   * e.g. database describing projects and tasks (project has many tasks)

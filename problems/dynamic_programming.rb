@@ -85,3 +85,29 @@ def search_matrix(matrix, target)
     
     false
 end
+
+# ---------------------------------------------
+# Given a m x n grid filled with non-negative numbers, 
+# find a path from top left to bottom right which minimizes the sum of all numbers along its path.
+
+def min_path_sum(grid)
+    row = grid.length
+    col = grid[0].length
+
+    i, j = 0, 0
+
+    while i < row && j < col
+        if i == 0 && j != 0
+            grid[i][j] = grid[i][j] + grid[i][j - 1]
+        elsif i != 0 && j == 0
+            grid[i][j] = grid[i][j] + grid[i - 1][j]
+        elsif i != 0 && j != 0
+            grid[i][j] = grid[i][j] + [grid[i][j - 1], grid[i - 1][j]].min
+        end
+
+        i += 1
+        j += 1
+    end
+
+    grid[-1][-1]
+end
