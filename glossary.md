@@ -275,6 +275,10 @@
 #### Synchronous
 * Code is executed sequentially from top to bottom
 
+#### TCP
+* **Transmission Control Protocol**
+* protocol that defines how to establish and maintain a network connection for exchanging data between sending and receiving computers
+
 #### Topological Sort
 * used on **Directed Acyclic Graph (DAG)**
 * **linear ordering of vertices** such that for every directed edge (u, v) vertex u comes before v in the ordering
