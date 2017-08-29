@@ -18,3 +18,13 @@
 * Use multithreaded server (Puma)
 * Add RAM to your server
 * Use several servers and a load balancer
+
+### Network
+#### Server-side
+* load third-party assets through CDN
+* use servers that are close to your users
+* minimize cookie sizes
+* preload components
+
+#### Client-side
+* 
