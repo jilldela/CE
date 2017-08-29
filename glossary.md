@@ -121,6 +121,10 @@
 * do not need to specify data type when declaring methods or variables
 * Ruby is dynamically typed
 
+#### Etag
+* Etag HTTP response header is an identifier for a specific version of a resource
+* allows caches to be more efficient and saves bandwidth (web server does not need to send full response if the content has not changed)
+
 #### Function Composition
 * the process of combining two or more functions in order to produce a new function or perform a computation.
 
