@@ -203,3 +203,22 @@ def roman_to_int(s)
     
     sum
 end
+
+# ------------------------------------------
+
+# given two strings, pattern and input,
+
+# write a function that takes in a pattern and an input, and
+# determines whether you have a match
+
+# return 1 if a match, 0 if not
+
+# i.e.
+# pattern "abba"
+# input "redbluebluered"
+
+# return 1
+
+def word_pattern(pattern, input)
+    
+end

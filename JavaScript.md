@@ -49,6 +49,11 @@
 
 * **Node & Express**
 
+* **hoisting**
+  * context execution allows variables to be initialized and used before declared, **but cannot be used without initialization**
+  * variable and function declarations are put into memory during the **compile** phase
+  * JavaScript only hoists declarations, not initializations
+
 
 
 ## JavaScript Questions
