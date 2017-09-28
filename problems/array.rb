@@ -257,3 +257,51 @@ def selection_sort(arr)
 end
 
 p selection_sort([10,8,7,5,3,4,1]) #== [1,3,4,5,7,8,10]
+
+# ---------------------------------------
+# Given a list of airline tickets represented by pairs of departure and arrival airports [from, to], 
+# reconstruct the itinerary in order. All of the tickets belong to a man who departs from JFK. 
+# Thus, the itinerary must begin with JFK.
+
+# Note:
+# If there are multiple valid itineraries, you should return the itinerary 
+# that has the smallest lexical order when read as a single string. 
+# For example, the itinerary ["JFK", "LGA"] has a smaller lexical order than ["JFK", "LGB"].
+# All airports are represented by three capital letters (IATA code).
+# You may assume all tickets form at least one valid itinerary.
+# Example 1:
+# tickets = [["MUC", "LHR"], ["JFK", "MUC"], ["SFO", "SJC"], ["LHR", "SFO"]]
+# Return ["JFK", "MUC", "LHR", "SFO", "SJC"].
+# Example 2:
+# tickets = [["JFK","SFO"],["JFK","ATL"],["SFO","ATL"],["ATL","JFK"],["ATL","SFO"]]
+# Return ["JFK","ATL","JFK","SFO","ATL","SFO"].
+# Another possible reconstruction is ["JFK","SFO","ATL","JFK","ATL","SFO"]. But it is larger in lexical order.
+
+def find_itinerary(tickets)
+    visit = {}
+    tickets.each do |ticket|
+      if visit[ticket[0]]
+        visit[ticket[0]] << ticket[1]
+      else
+        visit[ticket[0]] = [ticket[1]]
+      end
+    end
+    
+    result = ["JFK"]
+    until visit.empty?
+      visit.each do |k,v|
+        if k == result.last && v.length < 2 
+          result << v[0]
+          visit.delete(k)
+        elsif k == result.last && v.length >= 2 
+          v.sort!
+          result << v.shift
+        end
+      end
+      if !visit[result.last] && !visit.empty?
+        remainder = visit.keys.sort!
+        result << remainder[0]
+      end
+    end
+    result
+end
