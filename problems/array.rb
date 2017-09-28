@@ -237,3 +237,23 @@ def longest_consecutive(nums)
     end 
     max
 end
+
+#---------------
+# Selection Sort
+
+def selection_sort(arr)
+  (arr.length-1).times do |i|
+    min_idx = i
+    
+    (i + 1).upto(arr.length-1) do |j|
+      min_idx = j if arr[j] < arr[min_idx]
+    end
+    
+    if arr[i] > arr[min_idx]
+      arr[i], arr[min_idx] = arr[min_idx], arr[i]
+    end
+  end
+  arr
+end
+
+p selection_sort([10,8,7,5,3,4,1]) #== [1,3,4,5,7,8,10]
