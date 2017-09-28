@@ -97,6 +97,10 @@
 * attack that causesa user's web browser to perform an unwanted action
 * occurs when a malicious web site, email, blog, instant message makes a target system perform a function via the target's browser without target user's knowledge
 
+#### Data Abstraction
+* tool for breaking down complex data problems into manageable chunks
+* specify data objects involved and the operations to be performed on these data objects without being overly concerned with how the data objects will be represented and stored in memory
+
 #### Denormalization (Database)
 * adding redundant information into a database to speed up reads
   * e.g. database describing projects and tasks (project has many tasks)
